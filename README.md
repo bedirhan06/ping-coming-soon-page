@@ -31,8 +31,3 @@ pnpm build
 ```bash
 pnpm preview
 ```
-
-## Ping Coming Soon Page with client side Validation
-
-
-
