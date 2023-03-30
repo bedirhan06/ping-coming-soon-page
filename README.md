@@ -1,6 +1,4 @@
-# Vite Templates for Beginner
-
-## Frontend Mentor
+# Ping Coming Soon Page
 
 ## Screenshots
 ![Ping Coming Soon Page Screenshot 1](https://user-images.githubusercontent.com/108692289/228929456-c8ec2e90-56c4-4a5e-bd8b-ae866d579242.png)
