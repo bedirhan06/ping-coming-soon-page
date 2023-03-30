@@ -1,10 +1,6 @@
 # Vite Templates for Beginner
 
-## Frontend Mentor Instructions 
-
-### Move Template Files
-
-Move `design/` folders and `style-guide.md` to project root and `images/` folders to under the `public/`.
+## Frontend Mentor
 
 ## Installation Instructions
 
@@ -32,4 +28,7 @@ pnpm build
 pnpm preview
 ```
 
+## Ping Coming Soon Page with client side Validation
+
+## Screenshots
 

@@ -1,4 +1,4 @@
-// Insert google font import here
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap');
 
 html,
 body {
@@ -13,8 +13,9 @@ body {
 }
 
 body {
-  font-family: sans-serif;
-  font-size: 16px;
+  font-family: 'Libre Franklin', sans-serif;
+  font-weight: 300;
+  font-size: 20px;
 }
 
 [hidden] {

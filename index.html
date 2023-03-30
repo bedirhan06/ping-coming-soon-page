@@ -4,22 +4,72 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite Beginner Template</title>
+    <title>Ping Coming Soon Page</title>
   </head>
-
   <body>
-    <h1>Vite Beginner Template</h1>
-    <p>
-      You can start with edit <code>src/main.js</code><br /><br />
-      Click on the Vite logo to
-      <a href="https://vitejs.dev/guide">learn more</a>
-    </p>
-    <p class="read-the-docs"></p>
-    <a href="https://vitejs.dev/guide">
-      <svg class="logo" aria-hidden="true" width="64" height="64">
-        <use href="#svg-vite" />
-      </svg>
-    </a>
+    <div class="container">
+      <div class="notify">
+        <img
+          class="notify__ping-logo"
+          width="86"
+          height="26"
+          src="/images/logo.svg"
+          alt="Ping Logo"
+        />
+
+        <h2 class="notify__heading">
+          We are launching <span class="notify__heading-bold">soon!</span>
+        </h2>
+        <p class="notify__description">Subscribe and get notified</p>
+
+        <form class="notify__form js-form">
+          <input
+            class="notify__form-input js-input"
+            type="email"
+            placeholder="Your email adress..."
+          />
+          <button class="notify__form-submit js-button" type="submit">
+            Notify Me
+          </button>
+        </form>
+
+        <div class="js-error" hidden>Please provide a valid email adress</div>
+      </div>
+
+      <img
+        class="dashboard-image"
+        width="100%"
+        height="auto"
+        src="/images/illustration-dashboard.png"
+        alt="illustration of dashboard"
+      />
+
+      <footer class="footer">
+        <div class="footer__social">
+          <div class="footer__social-icon-wrapper">
+            <svg class="footer__social-icon" width="24" height="24">
+              <use href="#svg-facebook"></use>
+            </svg>
+          </div>
+
+          <div class="footer__social-icon-wrapper">
+            <svg class="footer__social-icon" width="24" height="24">
+              <use href="#svg-twitter"></use>
+            </svg>
+          </div>
+
+          <div class="footer__social-icon-wrapper">
+            <svg class="footer__social-icon" width="24" height="24">
+              <use href="#svg-instagram"></use>
+            </svg>
+          </div>
+        </div>
+
+        <div class="footer__copyright">
+          &copy; Copyright Ping. All right reserved.
+        </div>
+      </footer>
+    </div>
 
     <script type="module" src="src/main.js"></script>
   </body>

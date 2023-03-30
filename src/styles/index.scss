@@ -1,66 +1,178 @@
 @import "base";
 @import "variables";
+@import "footer";
 
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+.container {
+  padding-inline: 32px;
+  padding-top: 108px;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: underline;
-  will-change: filter;
-  transition: filter 300ms;
-}
-a:hover {
-  color: #535bf2;
-  filter: drop-shadow(0 0 1em #535bf2bb);
-}
-
-
-body {
-  margin: 0;
   display: flex;
   flex-direction: column;
-  row-gap: 32px;
   align-items: center;
-  justify-content: center;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
+  .notify {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
 
-.logo {
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
+    width: 100%;
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+    &__ping-logo {
+      margin-bottom: 64px;
+    }
+
+    &__heading {
+      margin-bottom: 24px;
+
+      font-weight: 300;
+      color: var(--gray);
+    }
+
+    &__heading-bold {
+      font-weight: 700;
+      color: var(--very-dark-blue);
+    }
+
+    &__description {
+      margin-bottom: 48px;
+    }
+
+    &__form {
+      margin-bottom: 96px;
+
+      padding-inline: 24px;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+    }
+
+    &__form-input,
+    &__form-submit {
+      border-radius: 9999px;
+
+      padding-block: 16px;
+
+      width: 100%;
+      font-size: 20px;
+    }
+
+    &__form-input {
+      margin-bottom: 64px;
+
+      padding-left: 48px;
+
+      font-weight: 300;
+      border: 1px solid var(--blue);
+    }
+
+    &__form-input:focus {
+      border: 1px solid var(--light-red);
+    }
+
+    &__form-input:focus-visible {
+      outline: none;
+      border: 2px solid var(--blue);
+    }
+
+    &__form-input::-webkit-input-placeholder {
+      color: var(--blue);
+      opacity: 0.3;
+    }
+
+    &__form-submit {
+      padding: auto;
+      border: none;
+      background-color: var(--blue);
+      font-weight: 300;
+      color: white;
+      box-shadow: 0 10px 15px hsla(223, 87%, 63%, 0.4);
+    }
+
+    .js-error {
+      color: var(--light-red);
+    }
+
+    .error--active {
+      width: max-content;
+      position: absolute;
+      bottom: 186px;
+      right: 50%;
+      transform: translateX(50%);
+    }
+
+    .notify__form-input--active {
+      border: 1px solid var(--light-red);
+    }
+
+    .notify__form-input--active:focus {
+      outline: none;
+      border: 2px solid var(--light-red);
+    }
   }
-  a:hover {
-    color: #747bff;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    padding-inline: 56px;
+    padding-top: 64px;
+
+    .notify {
+      .error--active {
+        position: absolute;
+        bottom: 186px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .container {
+    padding-inline: 248px;
+    padding-top: 64px;
+
+    .notify {
+      &__form {
+        margin-bottom: 64px;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+
+        &-input {
+          padding-left: 32px;
+        }
+
+        &-submit {
+          margin-left: 16px;
+          width: 40%;
+          cursor: pointer;
+        }
+
+        &-submit:hover {
+          opacity: 0.8;
+        }
+      }
+
+      &__ping-logo {
+        margin-bottom: 36px;
+      }
+
+      &__heading {
+        margin-bottom: 12px;
+      }
+
+      &__description {
+        margin-bottom: 40px;
+      }
+
+      .error--active {
+        position: absolute;
+        bottom: 100px;
+        left: 56px;
+        transform: none;
+      }
+    } 
   }
 }
